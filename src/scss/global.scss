@@ -1,0 +1,38 @@
+@import "./_variables.scss";
+
+html {
+    min-height: 100vh;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.app {
+    font-family: 'Roboto', sans-serif;;
+    color: $font-color-main;
+    background-color: $light-gray;
+    flex-grow: 1;
+}
+
+.container {
+    max-width: 90.5rem;
+    padding: 0 0.938rem;
+    margin: 0 auto;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+.main-title {
+    font-size: 3rem;
+    margin: 0 0 2.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
