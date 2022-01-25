@@ -5,7 +5,7 @@
         Booking
       </h1>
       <div class="booking__body">
-        <BookingInfo/>
+        <BookingInfo v-if="successSingleBooking"/>
         <Alerts :alerts="alertsByBooking($router.history.current.params.id)"/>
       </div>
     </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+import { mapActions, mapGetters, mapState } from 'vuex';
 import BookingInfo from './BookingInfo.vue';
 import Alerts from '../../components/features/Alerts/index.vue';
 
@@ -32,6 +32,7 @@ export default {
 
   computed: {
     ...mapGetters('alerts', ['alertsByBooking']),
+    ...mapState('bookings', ['successSingleBooking']),
   },
 
   methods: {

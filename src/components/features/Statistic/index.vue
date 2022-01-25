@@ -13,10 +13,9 @@
         booking this week
       </div>
       <div class="statistic__item statistic__item--busy">
-        We are busy for
-        <span class="text-bold">{{ busy.day | createPercents}} today</span>
-        and for
-        <span class="text-bold">{{ busy.week | createPercents }} this week</span>
+        We are <span class="text-bold">{{ busy.day | createPercents}}
+        busy today</span> and <span class="text-bold">
+        {{ busy.week | createPercents }} this week</span>
       </div>
     </div>
   </div>

@@ -16,15 +16,30 @@
 import { mapActions, mapState } from 'vuex';
 import BookingsList from './BookinsList.vue';
 
+const INTERVAL = 60 * 1000;
+const PER_PAGE = 10;
+
 export default {
   name: 'Bookings',
+
+  data: () => ({
+    interval: null,
+  }),
 
   components: {
     BookingsList,
   },
 
   created() {
-    this.getBookingsList({ limit: 15 });
+    this.getInitialData();
+
+    this.interval = setInterval(() => {
+      this.getInitialData();
+    }, INTERVAL);
+  },
+
+  beforeDestroy() {
+    clearInterval(this.interval);
   },
 
   computed: {
@@ -33,6 +48,10 @@ export default {
 
   methods: {
     ...mapActions('bookings', ['getBookingsList']),
+
+    getInitialData() {
+      this.getBookingsList({ limit: PER_PAGE });
+    },
   },
 };
 </script>
