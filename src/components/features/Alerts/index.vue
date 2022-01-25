@@ -1,6 +1,6 @@
 <template>
   <div class="alerts">
-    <AlertItem/>
+    <AlertItem v-for="alert in alerts" :key="alert.timestamp" v-bind="alert"/>
   </div>
 </template>
 
@@ -9,6 +9,13 @@ import AlertItem from './AlertItem.vue';
 
 export default {
   name: 'Alerts',
+
+  props: {
+    alerts: {
+      type: Array,
+      required: true,
+    },
+  },
 
   components: {
     AlertItem,

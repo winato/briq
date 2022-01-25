@@ -6,7 +6,7 @@
       </div>
       <div class="booking-item__column booking-item__column--date">
         <time>
-          {{ date }}
+          {{ date | formatDate }}
         </time>
       </div>
       <div class="booking-item__column booking-item__column--time">
@@ -21,9 +21,7 @@
         <Tags :tags="deals"/>
       </div>
       <div class="booking-item__column booking-item__column--actions">
-        <div class="booking-item__action-button">
-          <img src="../../assets/alert.svg" alt="">
-        </div>
+        <AlertButton :id="id"/>
       </div>
     </div>
   </router-link>
@@ -31,9 +29,13 @@
 
 <script>
 import Tags from '../../components/shared/Tags/index.vue';
+import AlertButton from '../../components/features/Alerts/AlertButton.vue';
+import timeMixin from '../../mixins/timeMixin';
 
 export default {
   name: 'BookingItem',
+
+  mixins: [timeMixin],
 
   props: {
     id: {
@@ -64,6 +66,7 @@ export default {
 
   components: {
     Tags,
+    AlertButton,
   },
 
   computed: {
@@ -125,10 +128,6 @@ export default {
     &--actions {
       justify-content: end;
     }
-  }
-
-  &__action-button {
-    cursor: pointer;
   }
 }
 

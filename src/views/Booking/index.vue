@@ -6,14 +6,14 @@
       </h1>
       <div class="booking__body">
         <BookingInfo/>
-        <Alerts/>
+        <Alerts :alerts="alertsByBooking($router.history.current.params.id)"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapGetters } from 'vuex';
 import BookingInfo from './BookingInfo.vue';
 import Alerts from '../../components/features/Alerts/index.vue';
 
@@ -27,10 +27,16 @@ export default {
 
   created() {
     this.getBooking(this.$router.history.current.params.id);
+    this.getAlerts();
+  },
+
+  computed: {
+    ...mapGetters('alerts', ['alertsByBooking']),
   },
 
   methods: {
     ...mapActions('bookings', ['getBooking']),
+    ...mapActions('alerts', ['getAlerts']),
   },
 };
 </script>

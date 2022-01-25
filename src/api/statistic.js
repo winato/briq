@@ -1,7 +1,7 @@
 import doRequest from './doRequest';
 
 const getStatistic = () => doRequest({
-  methods: 'GET',
+  method: 'GET',
   url: '/stats',
 });
 

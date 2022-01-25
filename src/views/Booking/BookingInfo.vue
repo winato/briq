@@ -10,7 +10,7 @@
       <div class="booking-info__column">
         <p class="booking-info__text">
           Date:
-          <time class="text-bold">{{ bookingData.date }}</time>
+          <time class="text-bold">{{ bookingData.date | formatDate }}</time>
         </p>
         <p class="booking-info__text">
           Time:
@@ -30,9 +30,12 @@
 <script>
 import { mapState } from 'vuex';
 import Tags from '../../components/shared/Tags/index.vue';
+import timeMixin from '../../mixins/timeMixin';
 
 export default {
   name: 'BookingInfo',
+
+  mixins: [timeMixin],
 
   components: {
     Tags,

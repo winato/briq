@@ -1,13 +1,13 @@
 import doRequest from './doRequest';
 
 const getBookingsList = (params) => doRequest({
-  methods: 'GET',
+  method: 'GET',
   url: '',
   params,
 });
 
 const getBooking = (id) => doRequest({
-  methods: 'GET',
+  method: 'GET',
   url: `/${id}`,
 });
 

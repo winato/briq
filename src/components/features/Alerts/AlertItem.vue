@@ -2,15 +2,34 @@
   <div class="alert-item">
     <div class="alert-item__group">
       <img class="alert-item__icon" src="../../../assets/alert-white.svg" alt="">
-      <p class="alert-item__text">Text</p>
+      <p class="alert-item__text">
+        {{ reason }}
+      </p>
     </div>
-    <time>17:30</time>
+    <time>
+      {{ timestamp | formatFullDate }}
+    </time>
   </div>
 </template>
 
 <script>
+import timeMixin from '../../../mixins/timeMixin';
+
 export default {
   name: 'AlertItem',
+
+  mixins: [timeMixin],
+
+  props: {
+    reason: {
+      type: String,
+      required: true,
+    },
+    timestamp: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 
