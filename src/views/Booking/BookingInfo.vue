@@ -46,8 +46,8 @@ export default {
   padding: 1.25rem 4.375rem 2.5rem;
   background-color: white;
   border-radius: 0.313rem;
-  max-width: 66%;
   font-size: 14px;
+  margin-bottom: 4.375rem;
 
   &__id {
     color: $dark-gray;

@@ -5,10 +5,14 @@
         Adam Smit
       </div>
       <div class="booking-item__column booking-item__column--date">
-        2021-08-13
+        <time>
+          2021-08-13
+        </time>
       </div>
       <div class="booking-item__column booking-item__column--time">
-        17:30
+        <time>
+          17:30
+        </time>
       </div>
       <div class="booking-item__column booking-item__column--people">
         6 people
