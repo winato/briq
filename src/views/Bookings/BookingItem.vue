@@ -1,24 +1,24 @@
 <template>
-  <router-link :to="{ name: 'bookingItem', params: { id: 1 }}">
+  <router-link :to="{ name: 'bookingItem', params: { id: id }}">
     <div class="booking-item">
       <div class="booking-item__column booking-item__column--name">
-        Adam Smit
+        {{ name || '-' }}
       </div>
       <div class="booking-item__column booking-item__column--date">
         <time>
-          2021-08-13
+          {{ date }}
         </time>
       </div>
       <div class="booking-item__column booking-item__column--time">
         <time>
-          17:30
+          {{ time }}
         </time>
       </div>
       <div class="booking-item__column booking-item__column--people">
-        6 people
+        {{ groupSize }} {{ groupTitle }}
       </div>
       <div class="booking-item__column">
-        <Tags/>
+        <Tags :tags="deals"/>
       </div>
       <div class="booking-item__column booking-item__column--actions">
         <div class="booking-item__action-button">
@@ -35,8 +35,41 @@ import Tags from '../../components/shared/Tags/index.vue';
 export default {
   name: 'BookingItem',
 
+  props: {
+    id: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      default: '',
+    },
+    date: {
+      type: String,
+      required: true,
+    },
+    time: {
+      type: String,
+      required: true,
+    },
+    groupSize: {
+      type: Number,
+      default: 0,
+    },
+    deals: {
+      type: Array,
+      required: true,
+    },
+  },
+
   components: {
     Tags,
+  },
+
+  computed: {
+    groupTitle() {
+      return this.groupSize === 1 ? 'person' : 'people';
+    },
   },
 };
 </script>
@@ -72,12 +105,14 @@ export default {
 
   &__column {
     display: flex;
+    padding: .2rem;
     align-items: center;
-    width: 16.6%;
+    width: 15%;
 
     &--name {
       font-weight: bold;
       font-size: 1.5rem;
+      width: 25%;
     }
 
     &--time,

@@ -4,12 +4,16 @@
       <h1 class="main-title">
         Our Bookings
       </h1>
-      <BookingsList />
+      <BookingsList
+        :bookings="bookings"
+        v-if="successBookingsList"
+      />
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions, mapState } from 'vuex';
 import BookingsList from './BookinsList.vue';
 
 export default {
@@ -17,6 +21,18 @@ export default {
 
   components: {
     BookingsList,
+  },
+
+  created() {
+    this.getBookingsList({ limit: 15 });
+  },
+
+  computed: {
+    ...mapState('bookings', ['bookings', 'successBookingsList']),
+  },
+
+  methods: {
+    ...mapActions('bookings', ['getBookingsList']),
   },
 };
 </script>

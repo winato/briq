@@ -1,15 +1,14 @@
 import doRequest from './doRequest';
 
-const getBookingsList = ({ params }) => doRequest({
+const getBookingsList = (params) => doRequest({
   methods: 'GET',
-  url: 'bookings',
+  url: '',
   params,
 });
 
-const getBooking = ({ params }) => doRequest({
+const getBooking = (id) => doRequest({
   methods: 'GET',
-  url: 'stats',
-  params,
+  url: `/${id}`,
 });
 
 export default { getBookingsList, getBooking };

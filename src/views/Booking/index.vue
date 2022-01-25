@@ -13,8 +13,9 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import BookingInfo from './BookingInfo.vue';
-import Alerts from '../../components/shared/Alerts/index.vue';
+import Alerts from '../../components/features/Alerts/index.vue';
 
 export default {
   name: 'Booking',
@@ -22,6 +23,14 @@ export default {
   components: {
     BookingInfo,
     Alerts,
+  },
+
+  created() {
+    this.getBooking(this.$router.history.current.params.id);
+  },
+
+  methods: {
+    ...mapActions('bookings', ['getBooking']),
   },
 };
 </script>

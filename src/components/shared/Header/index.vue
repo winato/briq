@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import Statistic from '../../feature/Statistic/index.vue';
+import Statistic from '../../features/Statistic/index.vue';
 
 export default {
   name: 'Header',

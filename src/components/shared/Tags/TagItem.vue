@@ -1,12 +1,25 @@
 <template>
   <div class="tag-item">
-    dinner
+    {{ label | removeDash}}
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Tags',
+  name: 'TagItem',
+
+  filters: {
+    removeDash(string) {
+      return string.replace(/-/g, ' ');
+    },
+  },
+
+  props: {
+    label: {
+      type: String,
+      required: true,
+    },
+  },
 };
 </script>
 
