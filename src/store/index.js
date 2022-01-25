@@ -1,15 +1,16 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import statistic from './statistic/index';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
+const debug = process.env.NODE_ENV !== 'production';
+
+const store = new Vuex.Store({
   modules: {
+    statistic,
   },
+  strict: debug,
 });
+
+export default store;
