@@ -13,9 +13,9 @@
         booking this week
       </div>
       <div class="statistic__item statistic__item--busy">
-        We are <span class="text-bold">{{ busy.day | createPercents}}
+        We are <span class="text-bold">{{ busy.day | calcPercents}}
         busy today</span> and <span class="text-bold">
-        {{ busy.week | createPercents }} this week</span>
+        {{ busy.week | calcPercents }} this week</span>
       </div>
     </div>
   </div>
@@ -23,14 +23,13 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import calcPercents from '../../../utils/calcPercents';
 
 export default {
   name: 'Statistic',
 
   filters: {
-    createPercents(amount) {
-      return `${amount * 100}%`;
-    },
+    calcPercents,
   },
 
   created() {

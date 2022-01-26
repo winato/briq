@@ -6,6 +6,6 @@ export default {
   },
   busy: {
     day: 0,
-    wek: 0,
+    week: 0,
   },
 };

@@ -5,11 +5,11 @@ export default {
     });
   },
   openModal(state, payload) {
-    state.selectedAlert = payload;
+    state.selectedBooking = payload;
     state.isModalOpen = true;
   },
   closeModal(state) {
-    state.selectedAlert = null;
+    state.selectedBooking = null;
     state.isModalOpen = false;
   },
 };

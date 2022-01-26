@@ -35,7 +35,7 @@ export default {
   }),
 
   computed: {
-    ...mapState('alerts', ['isModalOpen', 'selectedAlert']),
+    ...mapState('alerts', ['isModalOpen', 'selectedBooking']),
   },
 
   methods: {
@@ -45,7 +45,7 @@ export default {
     async createAlert() {
       await this.createAlertAction({
         reason: this.text,
-        id: this.selectedAlert,
+        id: this.selectedBooking,
       });
       this.close();
     },
