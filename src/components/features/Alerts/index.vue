@@ -10,15 +10,15 @@ import AlertItem from './AlertItem.vue';
 export default {
   name: 'Alerts',
 
+  components: {
+    AlertItem,
+  },
+
   props: {
     alerts: {
       type: Array,
       required: true,
     },
-  },
-
-  components: {
-    AlertItem,
   },
 };
 </script>

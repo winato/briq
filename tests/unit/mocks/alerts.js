@@ -8,7 +8,7 @@ export default {
     {
       bookingId: 2,
       reason: 'No reason provided, but please review this booking.',
-      timestamp: '2022-01-26T13:10:35.467Z',
+      timestamp: '2022-01-26T13:10:35.469Z',
     },
     {
       bookingId: 2,
