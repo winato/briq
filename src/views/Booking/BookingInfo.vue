@@ -3,9 +3,9 @@
     <p class="booking-info__id">
       {{ bookingData.id }}
     </p>
-    <h2 class="booking-info__name">
+    <Title tag="h2" type="user-name" class="booking-info__name">
       {{ bookingData.name }}
-    </h2>
+    </Title>
     <div class="booking-info__row">
       <div class="booking-info__column">
         <p class="booking-info__text">
@@ -31,6 +31,7 @@
 import { mapState } from 'vuex';
 import Tags from '../../components/shared/Tags/index.vue';
 import timeMixin from '../../mixins/timeMixin';
+import Title from '../../components/common/Title/index.vue';
 
 export default {
   name: 'BookingInfo',
@@ -39,6 +40,7 @@ export default {
 
   components: {
     Tags,
+    Title,
   },
 
   computed: {
@@ -54,8 +56,12 @@ export default {
   padding: 1.25rem 4.375rem 2.5rem;
   background-color: white;
   border-radius: 0.313rem;
-  font-size: 14px;
-  margin-bottom: 4.375rem;
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+
+  @media screen and (min-width: 992px) {
+    margin-bottom: 4.375rem;
+  }
 
   &__id {
     color: $dark-gray;

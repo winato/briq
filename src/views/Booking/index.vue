@@ -1,11 +1,18 @@
 <template>
   <div class="booking">
     <div class="container">
-      <h1 class="main-title">
+      <Title type="main" tag="h1">
         Booking
-      </h1>
+      </Title>
       <div class="booking__body">
         <BookingInfo v-if="successSingleBooking"/>
+        <Title
+          tag="h4"
+          type="empty"
+          v-else
+        >
+          Something went wrong. Please try again later!
+        </Title>
         <Alerts :alerts="alertsByBooking($router.history.current.params.id)"/>
       </div>
       <AlertModal/>
@@ -18,6 +25,7 @@ import { mapActions, mapGetters, mapState } from 'vuex';
 import BookingInfo from './BookingInfo.vue';
 import Alerts from '../../components/features/Alerts/index.vue';
 import AlertModal from '../../components/features/Alerts/AlertModal.vue';
+import Title from '../../components/common/Title/index.vue';
 
 export default {
   name: 'Booking',
@@ -26,6 +34,7 @@ export default {
     BookingInfo,
     Alerts,
     AlertModal,
+    Title,
   },
 
   created() {
@@ -51,7 +60,9 @@ export default {
   padding: 70px 0;
 
   &__body {
-    max-width: 66%;
+    @media screen and (min-width: 992px) {
+      max-width: 66%;
+    }
   }
 }
 </style>

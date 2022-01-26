@@ -6,6 +6,7 @@ export default {
       const { data } = await api.getBookingsList(params);
       commit('setBookingsList', data);
     } catch (error) {
+      window.Vue.toasted.global.globalAppError({ message: error.message });
       throw new Error(error);
     }
   },
@@ -15,6 +16,7 @@ export default {
       const { data } = await api.getBooking(id);
       commit('setBookingData', data);
     } catch (error) {
+      window.Vue.toasted.global.globalAppError({ message: error.message });
       throw new Error(error);
     }
   },

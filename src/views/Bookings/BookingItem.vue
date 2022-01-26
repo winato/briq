@@ -2,7 +2,9 @@
   <router-link :to="{ name: 'bookingItem', params: { id: id }}">
     <div class="booking-item">
       <div class="booking-item__column booking-item__column--name">
-        {{ name || '-' }}
+        <Title type="user-name" tag="h4">
+          {{ name || '-' }}
+        </Title>
       </div>
       <div class="booking-item__column booking-item__column--date">
         <time>
@@ -31,6 +33,7 @@
 import Tags from '../../components/shared/Tags/index.vue';
 import AlertButton from '../../components/features/Alerts/AlertButton.vue';
 import timeMixin from '../../mixins/timeMixin';
+import Title from '../../components/common/Title/index.vue';
 
 export default {
   name: 'BookingItem',
@@ -67,6 +70,7 @@ export default {
   components: {
     Tags,
     AlertButton,
+    Title,
   },
 
   computed: {
@@ -102,7 +106,7 @@ export default {
 
   &:hover {
     &:before {
-      width: 15px;
+      width: 0.938rem;
     }
   }
 
@@ -113,8 +117,6 @@ export default {
     width: 15%;
 
     &--name {
-      font-weight: bold;
-      font-size: 1.5rem;
       width: 25%;
     }
 
@@ -122,7 +124,7 @@ export default {
     &--people,
     &--date {
       color: $dark-gray;
-      font-size: 14px;
+      font-size: 0.875rem;
     }
 
     &--actions {

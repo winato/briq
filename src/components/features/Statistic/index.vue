@@ -57,8 +57,13 @@ export default {
     }
 
     &__item {
-      font-size: 1.5rem;
+      font-size: 1rem;
       letter-spacing: -1px;
+      padding-right: .3rem;
+
+      @media screen and (min-width: 992px) {
+        font-size: 1.5rem;
+      }
 
       &--busy {
         font-size: 1.125rem;

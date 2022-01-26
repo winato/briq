@@ -1,13 +1,20 @@
 <template>
   <div class="bookings">
     <div class="container">
-      <h1 class="main-title">
+      <Title tag="h1" type="main">
         Our Bookings
-      </h1>
+      </Title>
       <BookingsList
         :bookings="bookings"
         v-if="successBookingsList"
       />
+      <Title
+        tag="h4"
+        type="empty"
+        v-else
+      >
+        Something went wrong. Please try again later!
+      </Title>
     </div>
     <AlertModal/>
   </div>
@@ -15,6 +22,7 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import Title from '../../components/common/Title/index.vue';
 import AlertModal from '../../components/features/Alerts/AlertModal.vue';
 import BookingsList from './BookinsList.vue';
 
@@ -31,6 +39,7 @@ export default {
   components: {
     BookingsList,
     AlertModal,
+    Title,
   },
 
   created() {

@@ -40,8 +40,8 @@ export default {
     ...mapMutations('alerts', ['closeModal']),
     ...mapActions('alerts', ['createAlertAction']),
 
-    createAlert() {
-      this.createAlertAction({
+    async createAlert() {
+      await this.createAlertAction({
         reason: this.text,
         id: this.selectedAlert,
       });
