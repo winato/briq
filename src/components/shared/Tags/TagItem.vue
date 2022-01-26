@@ -1,17 +1,15 @@
 <template>
-  <div class="tag-item">
-    {{ label | removeDash}}
-  </div>
+  <div class="tag-item">{{ label | removeDash}}</div>
 </template>
 
 <script>
+import removeDash from '../../../utils/removeDash';
+
 export default {
   name: 'TagItem',
 
   filters: {
-    removeDash(string) {
-      return string.replace(/-/g, ' ');
-    },
+    removeDash,
   },
 
   props: {
