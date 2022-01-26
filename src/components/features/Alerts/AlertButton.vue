@@ -26,3 +26,14 @@ export default {
   },
 };
 </script>
+
+<style lang="scss">
+  .alert-button {
+    opacity: .7;
+    transition: opacity .1s ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+</style>
