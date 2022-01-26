@@ -6,7 +6,6 @@ export default {
       await api.createAlert(payload);
       dispatch('getAlerts');
     } catch (error) {
-      window.Vue.toasted.global.globalAppError({ message: error.message });
       throw new Error(error);
     }
   },
@@ -17,7 +16,6 @@ export default {
 
       commit('setAlertsList', data);
     } catch (error) {
-      window.Vue.toasted.global.globalAppError({ message: error.message });
       throw new Error(error);
     }
   },

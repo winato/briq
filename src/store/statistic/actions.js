@@ -6,7 +6,6 @@ export default {
       const { data } = await api.getStatistic();
       commit('setStatistic', data);
     } catch (error) {
-      window.Vue.toasted.global.globalAppError({ message: error.message });
       throw new Error(error);
     }
   },
