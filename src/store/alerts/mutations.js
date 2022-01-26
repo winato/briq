@@ -4,4 +4,12 @@ export default {
       alertsList: payload.frontDeskAlerts,
     });
   },
+  openModal(state, payload) {
+    state.selectedAlert = payload;
+    state.isModalOpen = true;
+  },
+  closeModal(state) {
+    state.selectedAlert = null;
+    state.isModalOpen = false;
+  },
 };

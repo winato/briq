@@ -1,11 +1,11 @@
 <template>
-  <div class="alert-button" @click.prevent="triggerAlert">
+  <div class="alert-button" @click.prevent="open">
     <img src="../../../assets/alert.svg" alt="">
   </div>
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapMutations } from 'vuex';
 
 export default {
   name: 'AlertItem',
@@ -18,10 +18,10 @@ export default {
   },
 
   methods: {
-    ...mapActions('alerts', ['createAlertAction']),
+    ...mapMutations('alerts', ['openModal']),
 
-    triggerAlert() {
-      this.createAlertAction(this.id);
+    open() {
+      this.openModal(this.id);
     },
   },
 };

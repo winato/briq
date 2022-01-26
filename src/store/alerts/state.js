@@ -1,4 +1,6 @@
 export default {
-  success: true,
+  success: false,
   alertsList: [],
+  selectedAlert: null,
+  isModalOpen: false,
 };

@@ -5,6 +5,7 @@
       role="dialog"
       aria-labelledby="modalTitle"
       aria-describedby="modalDescription"
+      @click.self="close"
     >
       <div class="modal__layout">
         <div class="modal__container">

@@ -9,11 +9,13 @@
         v-if="successBookingsList"
       />
     </div>
+    <AlertModal/>
   </div>
 </template>
 
 <script>
 import { mapActions, mapState } from 'vuex';
+import AlertModal from '../../components/features/Alerts/AlertModal.vue';
 import BookingsList from './BookinsList.vue';
 
 const INTERVAL = 60 * 1000;
@@ -28,6 +30,7 @@ export default {
 
   components: {
     BookingsList,
+    AlertModal,
   },
 
   created() {
