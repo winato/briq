@@ -1,31 +1,33 @@
 <template>
-  <Modal :is-open="isModalOpen" @close="close">
+  <BModal :is-open="isModalOpen" @close="close">
     <template v-slot:header>
-      <h1>Please add reason for notification</h1>
+      <BTitle tag="h2">Please add reason for notification</BTitle>
     </template>
     <template>
-      <Textarea v-model="text"/>
+      <BTextarea v-model="text"/>
     </template>
     <template  v-slot:actions>
-      <Button @click="createAlert">Create</Button>
+      <BButton @click="createAlert">Create</BButton>
     </template>
-  </Modal>
+  </BModal>
 </template>
 
 <script>
 
 import { mapState, mapMutations, mapActions } from 'vuex';
-import Modal from '../../common/Modal/index.vue';
-import Textarea from '../../common/Textarea/index.vue';
-import Button from '../../common/Button/index.vue';
+import BModal from '../../common/BModal/index.vue';
+import BTextarea from '../../common/BTextarea/index.vue';
+import BButton from '../../common/BButton/index.vue';
+import BTitle from '../../common/BTitle/index.vue';
 
 export default {
   name: 'AlertModal',
 
   components: {
-    Modal,
-    Textarea,
-    Button,
+    BModal,
+    BTextarea,
+    BButton,
+    BTitle,
   },
 
   data: () => ({

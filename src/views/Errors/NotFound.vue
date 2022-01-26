@@ -1,12 +1,12 @@
 <template>
   <div class="not-found">
     <div class="container">
-      <Title tag="h1" class="not-found__title">
+      <BTitle tag="h1" class="not-found__title">
         Ooops!
-      </Title>
-      <Title tag="h4" type="subtitle" class="not-found__subtitle">
+      </BTitle>
+      <BTitle tag="h4" type="subtitle" class="not-found__subtitle">
         We can't find the page you're looking for.
-      </Title>
+      </BTitle>
       <a href="/" class="not-found__back">
         Go back to home page
       </a>
@@ -15,13 +15,13 @@
 </template>
 
 <script>
-import Title from '../../components/common/Title/index.vue';
+import BTitle from '../../components/common/BTitle/index.vue';
 
 export default {
   name: 'NotFound',
 
   components: {
-    Title,
+    BTitle,
   },
 };
 </script>

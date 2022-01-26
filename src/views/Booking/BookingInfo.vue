@@ -3,9 +3,9 @@
     <p class="booking-info__id">
       {{ bookingData.id }}
     </p>
-    <Title tag="h2" type="user-name" class="booking-info__name">
+    <BTitle tag="h2" type="user-name" class="booking-info__name">
       {{ bookingData.name }}
-    </Title>
+    </BTitle>
     <div class="booking-info__row">
       <div class="booking-info__column">
         <p class="booking-info__text">
@@ -31,7 +31,7 @@
 import { mapState } from 'vuex';
 import Tags from '../../components/shared/Tags/index.vue';
 import timeMixin from '../../mixins/timeMixin';
-import Title from '../../components/common/Title/index.vue';
+import BTitle from '../../components/common/BTitle/index.vue';
 
 export default {
   name: 'BookingInfo',
@@ -40,7 +40,7 @@ export default {
 
   components: {
     Tags,
-    Title,
+    BTitle,
   },
 
   computed: {

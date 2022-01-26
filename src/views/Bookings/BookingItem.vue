@@ -2,9 +2,9 @@
   <router-link :to="{ name: 'bookingItem', params: { id: id }}">
     <div class="booking-item">
       <div class="booking-item__column booking-item__column--name">
-        <Title type="user-name" tag="h4">
+        <BTitle type="user-name" tag="h4">
           {{ name || '-' }}
-        </Title>
+        </BTitle>
       </div>
       <div class="booking-item__column booking-item__column--date">
         <time>
@@ -33,7 +33,7 @@
 import Tags from '../../components/shared/Tags/index.vue';
 import AlertButton from '../../components/features/Alerts/AlertButton.vue';
 import timeMixin from '../../mixins/timeMixin';
-import Title from '../../components/common/Title/index.vue';
+import BTitle from '../../components/common/BTitle/index.vue';
 
 export default {
   name: 'BookingItem',
@@ -43,7 +43,7 @@ export default {
   components: {
     Tags,
     AlertButton,
-    Title,
+    BTitle,
   },
 
   props: {

@@ -33,7 +33,7 @@
 
 <script>
 export default {
-  name: 'Modal',
+  name: 'BModal',
 
   props: {
     isOpen: {

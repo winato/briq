@@ -5,26 +5,26 @@
       :key="booking.id"
       v-bind="booking"
     />
-    <Title
+    <BTitle
       tag="h4"
       type="empty"
       v-if="bookings.length === 0"
     >
       You have no bookings yet
-    </Title>
+    </BTitle>
   </div>
 </template>
 
 <script>
 import BookingItem from './BookingItem.vue';
-import Title from '../../components/common/Title/index.vue';
+import BTitle from '../../components/common/BTitle/index.vue';
 
 export default {
   name: 'BookingsList',
 
   components: {
     BookingItem,
-    Title,
+    BTitle,
   },
 
   props: {
