@@ -57,7 +57,7 @@ export default {
 <style lang="scss">
 
 .booking {
-  padding: 70px 0;
+  padding: 4.375rem 0;
 
   &__body {
     @media screen and (min-width: 992px) {

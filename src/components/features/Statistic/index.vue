@@ -66,8 +66,12 @@ export default {
       }
 
       &--busy {
-        font-size: 1.125rem;
+        font-size: 1rem;
         letter-spacing: normal;
+
+        @media screen and (min-width: 992px) {
+          font-size: 1.125rem;
+        }
       }
     }
   }

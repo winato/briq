@@ -1,5 +1,5 @@
 <template>
-  <Modal :is-open="isModalOpen" @close="closeModal">
+  <Modal :is-open="isModalOpen" @close="close">
     <template v-slot:header>
       <h1>Please add reason for notification</h1>
     </template>
@@ -45,6 +45,11 @@ export default {
         reason: this.text,
         id: this.selectedAlert,
       });
+      this.close();
+    },
+
+    close() {
+      this.text = '';
       this.closeModal();
     },
   },

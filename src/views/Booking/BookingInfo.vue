@@ -59,10 +59,6 @@ export default {
   font-size: 0.875rem;
   margin-bottom: 2rem;
 
-  @media screen and (min-width: 992px) {
-    margin-bottom: 4.375rem;
-  }
-
   &__id {
     color: $dark-gray;
     font-size: 0.75rem;

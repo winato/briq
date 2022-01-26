@@ -40,6 +40,12 @@ export default {
 
   mixins: [timeMixin],
 
+  components: {
+    Tags,
+    AlertButton,
+    Title,
+  },
+
   props: {
     id: {
       type: String,
@@ -65,12 +71,6 @@ export default {
       type: Array,
       required: true,
     },
-  },
-
-  components: {
-    Tags,
-    AlertButton,
-    Title,
   },
 
   computed: {

@@ -71,6 +71,6 @@ export default {
 <style lang="scss">
 
 .bookings {
-  padding: 70px 0;
+  padding: 4.375rem 0;
 }
 </style>
