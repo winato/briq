@@ -8,6 +8,7 @@
         <BookingInfo v-if="successSingleBooking"/>
         <Alerts :alerts="alertsByBooking($router.history.current.params.id)"/>
       </div>
+      <AlertModal/>
     </div>
   </div>
 </template>
@@ -16,6 +17,7 @@
 import { mapActions, mapGetters, mapState } from 'vuex';
 import BookingInfo from './BookingInfo.vue';
 import Alerts from '../../components/features/Alerts/index.vue';
+import AlertModal from '../../components/features/Alerts/AlertModal.vue';
 
 export default {
   name: 'Booking',
@@ -23,6 +25,7 @@ export default {
   components: {
     BookingInfo,
     Alerts,
+    AlertModal,
   },
 
   created() {
