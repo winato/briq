@@ -1,6 +1,10 @@
 <template>
   <div class="alerts">
-    <AlertItem v-for="alert in alerts" :key="alert.timestamp" v-bind="alert"/>
+    <AlertItem
+      v-for="alert in alerts"
+      :key="alert.timestamp"
+      v-bind="alert"
+    />
   </div>
 </template>
 

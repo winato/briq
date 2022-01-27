@@ -26,11 +26,11 @@ export default {
 @import "@/scss/_variables.scss";
 
 .tag-item {
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
   background-color: $green;
   padding: 0.3rem 1rem;
   border-radius: 1.875rem;
-  margin-right: 0.2rem;
-  margin-bottom: 0.2rem;
   font-weight: bold;
   font-size: 0.75rem;
   text-align: center;

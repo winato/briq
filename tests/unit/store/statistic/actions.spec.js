@@ -2,7 +2,6 @@ import statisticServices from '@/api/statistic';
 import Vuex from 'vuex';
 import Vue from 'vue';
 import actions from '@/store/statistic/actions';
-import statisticMock from '../../mocks/stat';
 
 Vue.use(Vuex);
 

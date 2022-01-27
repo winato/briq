@@ -56,9 +56,9 @@ export default {
     }
 
     &__item {
+      padding-right: .3rem;
       font-size: 1rem;
       letter-spacing: -1px;
-      padding-right: .3rem;
 
       @media screen and (min-width: 992px) {
         font-size: 1.5rem;

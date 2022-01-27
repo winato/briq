@@ -86,12 +86,12 @@ export default {
 @import "@/scss/_variables.scss";
 
 .booking-item {
-  border-radius: 0.313rem;
-  background-color: white;
-  margin-bottom: 0.313rem;
-  padding: 1.313rem 2.188rem;
   display: flex;
   position: relative;
+  margin-bottom: 0.313rem;
+  padding: 1.313rem 2.188rem;
+  border-radius: 0.313rem;
+  background-color: white;
   transition: all .1s ease-in-out;
 
   &:before {
@@ -115,8 +115,8 @@ export default {
 
   &__column {
     display: flex;
-    padding: .2rem;
     align-items: center;
+    padding: .2rem;
     width: calc(2 / 12) * 100%;
 
     &--name {

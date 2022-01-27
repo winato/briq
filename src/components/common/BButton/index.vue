@@ -16,8 +16,8 @@ export default {
 
 .button {
   display: flex;
-  border: none;
   padding: .5rem 2.5rem;
+  border: none;
   border-radius: 1rem;
   background-color: $green;
   cursor: pointer;

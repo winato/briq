@@ -1,5 +1,8 @@
 <template>
-  <BModal :is-open="isModalOpen" @close="close">
+  <BModal
+    :is-open="isModalOpen"
+    @close="close"
+  >
     <template v-slot:header>
       <BTitle tag="h2">Please add reason for notification</BTitle>
     </template>

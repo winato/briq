@@ -27,8 +27,8 @@ export default {
 @import "@/scss/_variables.scss";
 
 .main {
-  font-size: 2.2rem;
   margin: 0 0 2.5rem;
+  font-size: 2.2rem;
 
   @media screen and (min-width: 992px) {
     font-size: 3rem;
@@ -36,9 +36,9 @@ export default {
 }
 
 .user-name {
+  margin: 0;
   font-weight: bold;
   font-size: 1.1rem;
-  margin: 0;
   @media screen and (min-width: 992px) {
     font-size: 1.5rem;
   }

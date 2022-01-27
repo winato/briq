@@ -1,7 +1,7 @@
 <template>
   <div class="alert-item">
     <div class="alert-item__group">
-      <img class="alert-item__icon" src="../../../assets/alert-white.svg" alt="">
+      <img class="alert-item__icon" src="../../../assets/alert-white.svg" alt="alert">
       <p class="alert-item__text">
         {{ reason }}
       </p>
@@ -38,14 +38,14 @@ export default {
 @import "@/scss/_variables.scss";
 
 .alert-item {
-  background-color: $orange;
-  border-radius: 0.313rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 1.125rem 5rem 1.125rem 1.375rem;
-  color: white;
   margin-bottom: 0.313rem;
+  background-color: $orange;
+  border-radius: 0.313rem;
+  color: white;
 
   &__text {
     margin: 0;

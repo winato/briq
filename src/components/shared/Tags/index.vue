@@ -1,7 +1,8 @@
 <template>
   <div class="tags">
     <TagItem
-      v-for="tag in tags" :key="tag"
+      v-for="tag in tags"
+      :key="tag"
       :label="tag"
     />
   </div>

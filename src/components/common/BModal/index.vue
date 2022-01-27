@@ -1,11 +1,12 @@
 <template>
   <transition name="modal-fade">
     <div
-      class="modal" v-if="isOpen"
+      class="modal"
       role="dialog"
       aria-labelledby="modalTitle"
       aria-describedby="modalDescription"
       @click.self="close"
+      v-if="isOpen"
     >
       <div class="modal__layout">
         <div class="modal__container">
@@ -63,14 +64,14 @@ export default {
 }
 
 .modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: rgba(#000, 50%);
 
   &__layout {
@@ -83,11 +84,11 @@ export default {
 
   &__container {
     position: relative;
+    width: auto;
+    max-width: 36rem;
     padding: 2rem 3rem;
     border-radius: 0.313rem;
     background-color: white;
-    width: auto;
-    max-width: 36rem;
   }
 
   &__header {

@@ -6,7 +6,11 @@
       </p>
       <AlertButton :id="bookingData.id"/>
     </div>
-    <BTitle tag="h2" type="user-name" class="booking-info__name">
+    <BTitle
+      tag="h2"
+      type="user-name"
+      class="booking-info__name"
+    >
       {{ bookingData.name }}
     </BTitle>
     <div class="booking-info__row">
@@ -57,10 +61,10 @@ export default {
 
 .booking-info {
   padding: 1.25rem 4.375rem 2.5rem;
+  margin-bottom: 2rem;
   background-color: white;
   border-radius: 0.313rem;
   font-size: 0.875rem;
-  margin-bottom: 2rem;
 
   &__header {
     display: flex;

@@ -39,11 +39,11 @@ export default {
 .textarea {
 
   width: 100%;
+  margin-bottom: .5rem;
+  padding: .5rem;
   outline: none;
   border: 1px solid $dark-gray;
   border-radius: 0.313rem;
-  margin-bottom: .5rem;
-  padding: .5rem;
   resize: none;
 
 }
