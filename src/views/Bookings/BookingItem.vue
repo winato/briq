@@ -19,7 +19,7 @@
       <div class="booking-item__column booking-item__column--people">
         {{ groupSize }} {{ groupTitle }}
       </div>
-      <div class="booking-item__column">
+      <div class="booking-item__column booking-item__column--tags">
         <Tags :tags="deals"/>
       </div>
       <div class="booking-item__column booking-item__column--actions">
@@ -116,10 +116,14 @@ export default {
     display: flex;
     padding: .2rem;
     align-items: center;
-    width: 15%;
+    width: calc(2 / 12) * 100%;
 
     &--name {
-      width: 25%;
+      width: calc(2 / 12) * 100%;
+    }
+
+    &--tags {
+      width: calc(3 / 12) * 100%;
     }
 
     &--time,
@@ -131,6 +135,7 @@ export default {
 
     &--actions {
       justify-content: end;
+      width: calc(1 / 12) * 100%;
     }
   }
 }
