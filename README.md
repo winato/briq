@@ -1,4 +1,8 @@
-# briq
+# Briq
+
+## Design
+
+You can find design [here](https://www.figma.com/file/SNp2DL1k8uZOe8CjMLeA3f/Briq?node-id=0%3A1)
 
 ## Project setup
 ```
