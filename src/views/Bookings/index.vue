@@ -27,7 +27,7 @@ import AlertModal from '@/components/features/Alerts/AlertModal.vue';
 import BookingsList from './BookingsList.vue';
 
 const INTERVAL = 60 * 1000;
-const PER_PAGE = 20;
+const PER_PAGE = 10;
 
 export default {
   name: 'Bookings',
