@@ -32,11 +32,13 @@ export default {
     margin-bottom: 0.2rem;
     font-weight: bold;
     font-size: 0.75rem;
+    text-align: center;
 
     @media screen and (min-width: 992px) {
       padding: 0.5rem 1.688rem;
       margin-right: 0.563rem;
       margin-bottom: 0.563rem;
+      text-align: left;
     }
   }
 </style>
