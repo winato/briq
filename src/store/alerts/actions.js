@@ -1,9 +1,10 @@
-import api from '../../api';
+import api from '@/api';
 
 export default {
   async createAlertAction({ dispatch }, payload) {
     try {
       await api.createAlert(payload);
+
       dispatch('getAlerts');
     } catch (error) {
       throw new Error(error);

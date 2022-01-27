@@ -8,7 +8,7 @@ describe('api/statistic', () => {
     jest.clearAllMocks();
   });
 
-  it('getStatistic success', async () => {
+  it('Should get statistic', async () => {
     statisticServices.getStatistic.mockResolvedValueOnce();
 
     statisticServices.getStatistic();

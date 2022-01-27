@@ -8,7 +8,7 @@ describe('api/bookings', () => {
     jest.clearAllMocks();
   });
 
-  it('getBooking', async () => {
+  it('Should get booking', async () => {
     bookingsServices.getBooking.mockResolvedValueOnce();
 
     bookingsServices.getBooking(5);
@@ -19,7 +19,7 @@ describe('api/bookings', () => {
     expect(bookingsServices.getBooking).toHaveBeenLastCalledWith(5);
   });
 
-  it('getBookingsList', async () => {
+  it('Should get bookings list', async () => {
     bookingsServices.getBookingsList.mockResolvedValueOnce();
 
     bookingsServices.getBookingsList({ limit: 10 });

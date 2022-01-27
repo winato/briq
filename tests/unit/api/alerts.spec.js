@@ -3,15 +3,12 @@ import flushPromises from 'flush-promises';
 
 jest.mock('@/api/alerts');
 
-beforeEach(() => {
-  jest.clearAllMocks();
-});
-
 describe('api/alerts', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  it('getAlerts success', async () => {
+
+  it('Should get alerts', async () => {
     alertsServices.getAlerts.mockResolvedValueOnce();
 
     alertsServices.getAlerts();
@@ -21,7 +18,7 @@ describe('api/alerts', () => {
     expect(alertsServices.getAlerts).toHaveBeenCalledTimes(1);
   });
 
-  it('createAlert', async () => {
+  it('Should create alert', async () => {
     const params = {
       bookingId: 1,
       reason: 'Some reason',
