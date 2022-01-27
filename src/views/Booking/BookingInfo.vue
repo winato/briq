@@ -8,15 +8,13 @@
     </BTitle>
     <div class="booking-info__row">
       <div class="booking-info__column">
-        <p class="booking-info__text">
-          Date:
-          <time class="text-bold">{{ bookingData.date | formatDate }}</time>
+        <p class="booking-info__text booking-info__text--date">
+          Date: <time class="text-bold">{{ bookingData.date | formatDate }}</time>
         </p>
-        <p class="booking-info__text">
-          Time:
-          <time class="text-bold">{{ bookingData.time }}</time>
+        <p class="booking-info__text booking-info__text--time">
+          Time: <time class="text-bold">{{ bookingData.time }}</time>
         </p>
-        <p class="booking-info__text">
+        <p class="booking-info__text booking-info__text--group">
           Group: <span class="text-bold">{{ bookingData.groupSize }}</span>
         </p>
       </div>
