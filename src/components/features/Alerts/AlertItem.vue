@@ -46,6 +46,10 @@ export default {
     color: white;
     margin-bottom: 0.313rem;
 
+    &__text {
+      margin: 0;
+    }
+
     &__icon {
       margin-right: 1.875rem;
     }
