@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import AlertButton from '@/components/features/Alerts/AlertButton.vue';
-import store from '@/store';
+import store from '@/store/index';
 
 describe('AlertButton.vue', () => {
   it('Should trigger open function', async () => {
