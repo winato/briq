@@ -16,6 +16,8 @@ yarn install
 yarn serve
 ```
 
+**Take into account that initially all API requests point to ```http://localhost``` with port ```8081```.** You can easily change with a ```BASE_API_URL``` variable in a ```constants.js``` file.
+
 ### Compiles and minifies for production
 ```
 yarn build
