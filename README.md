@@ -2,7 +2,9 @@
 
 ## Design
 
-You can find design [here](https://www.figma.com/file/SNp2DL1k8uZOe8CjMLeA3f/Briq?node-id=0%3A1)
+You can find design [here](https://www.figma.com/file/SNp2DL1k8uZOe8CjMLeA3f/Briq?node-id=0%3A1).
+
+I'm not a big fan of pixel perfect, but I still think that by designing from the start you can save a lot of time.
 
 ## Project setup
 ```
