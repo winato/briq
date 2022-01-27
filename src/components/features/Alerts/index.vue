@@ -24,7 +24,9 @@ export default {
 </script>
 
 <style lang="scss">
-  .alerts {
-    margin-bottom: 2rem;
-  }
+
+.alerts {
+  margin-bottom: 2rem;
+}
+
 </style>

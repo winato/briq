@@ -73,4 +73,5 @@ export default {
 .bookings {
   padding: 4.375rem 0;
 }
+
 </style>

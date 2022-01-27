@@ -34,29 +34,31 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/scss/_variables.scss";
 
-  .alert-item {
-    background-color: $orange;
-    border-radius: 0.313rem;
+@import "@/scss/_variables.scss";
+
+.alert-item {
+  background-color: $orange;
+  border-radius: 0.313rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.125rem 5rem 1.125rem 1.375rem;
+  color: white;
+  margin-bottom: 0.313rem;
+
+  &__text {
+    margin: 0;
+  }
+
+  &__icon {
+    margin-right: 1.875rem;
+  }
+
+  &__group {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 1.125rem 5rem 1.125rem 1.375rem;
-    color: white;
-    margin-bottom: 0.313rem;
-
-    &__text {
-      margin: 0;
-    }
-
-    &__icon {
-      margin-right: 1.875rem;
-    }
-
-    &__group {
-      display: flex;
-      align-items: center;
-    }
   }
+}
+
 </style>

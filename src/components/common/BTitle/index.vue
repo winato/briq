@@ -23,29 +23,30 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/scss/_variables.scss";
 
-  .main {
-    font-size: 2.2rem;
-    margin: 0 0 2.5rem;
+@import "@/scss/_variables.scss";
 
-    @media screen and (min-width: 992px) {
-      font-size: 3rem;
-    }
+.main {
+  font-size: 2.2rem;
+  margin: 0 0 2.5rem;
+
+  @media screen and (min-width: 992px) {
+    font-size: 3rem;
   }
+}
 
-  .user-name {
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin: 0;
-    @media screen and (min-width: 992px) {
-      font-size: 1.5rem;
-    }
+.user-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin: 0;
+  @media screen and (min-width: 992px) {
+    font-size: 1.5rem;
   }
+}
 
-  .empty {
-    text-align: center;
-    color: $dark-gray;
-  }
+.empty {
+  text-align: center;
+  color: $dark-gray;
+}
 
 </style>

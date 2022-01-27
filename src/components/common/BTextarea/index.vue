@@ -33,18 +33,19 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "@/scss/_variables.scss";
 
-  .textarea {
+@import "@/scss/_variables.scss";
 
-    width: 100%;
-    outline: none;
-    border: 1px solid $dark-gray;
-    border-radius: 0.313rem;
-    margin-bottom: .5rem;
-    padding: .5rem;
-    resize: none;
+.textarea {
 
-  }
+  width: 100%;
+  outline: none;
+  border: 1px solid $dark-gray;
+  border-radius: 0.313rem;
+  margin-bottom: .5rem;
+  padding: .5rem;
+  resize: none;
+
+}
 
 </style>

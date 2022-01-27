@@ -27,8 +27,10 @@ export default {
 </script>
 
 <style lang="scss">
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 </style>

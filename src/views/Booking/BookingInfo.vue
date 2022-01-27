@@ -90,4 +90,5 @@ export default {
     margin: 0.813rem 0;
   }
 }
+
 </style>

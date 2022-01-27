@@ -27,6 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
+
 @import "@/scss/_variables.scss";
 
 .not-found {
@@ -56,4 +57,5 @@ export default {
     color: $blue;
   }
 }
+
 </style>
