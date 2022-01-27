@@ -15,10 +15,10 @@
 <script>
 
 import { mapState, mapMutations, mapActions } from 'vuex';
-import BModal from '../../common/BModal/index.vue';
-import BTextarea from '../../common/BTextarea/index.vue';
-import BButton from '../../common/BButton/index.vue';
-import BTitle from '../../common/BTitle/index.vue';
+import BModal from '@/components/common/BModal/index.vue';
+import BTextarea from '@/components/common/BTextarea/index.vue';
+import BButton from '@/components/common/BButton/index.vue';
+import BTitle from '@/components/common/BTitle/index.vue';
 
 export default {
   name: 'AlertModal',

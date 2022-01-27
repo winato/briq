@@ -22,10 +22,10 @@
 
 <script>
 import { mapActions, mapGetters, mapState } from 'vuex';
+import Alerts from '@/components/features/Alerts/index.vue';
+import AlertModal from '@/components/features/Alerts/AlertModal.vue';
+import BTitle from '@/components/common/BTitle/index.vue';
 import BookingInfo from './BookingInfo.vue';
-import Alerts from '../../components/features/Alerts/index.vue';
-import AlertModal from '../../components/features/Alerts/AlertModal.vue';
-import BTitle from '../../components/common/BTitle/index.vue';
 
 export default {
   name: 'Booking',

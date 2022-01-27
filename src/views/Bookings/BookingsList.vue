@@ -16,8 +16,8 @@
 </template>
 
 <script>
+import BTitle from '@/components/common/BTitle/index.vue';
 import BookingItem from './BookingItem.vue';
-import BTitle from '../../components/common/BTitle/index.vue';
 
 export default {
   name: 'BookingsList',

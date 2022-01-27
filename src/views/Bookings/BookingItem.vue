@@ -82,7 +82,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/_variables.scss";
+@import "@/scss/_variables.scss";
 
 .booking-item {
   border-radius: 0.313rem;
@@ -91,6 +91,7 @@ export default {
   padding: 1.313rem 2.188rem;
   display: flex;
   position: relative;
+  transition: all .1s ease-in-out;
 
   &:before {
     content: '';
@@ -105,6 +106,7 @@ export default {
   }
 
   &:hover {
+    background-color: #F9F9F9;
     &:before {
       width: 0.938rem;
     }

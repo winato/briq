@@ -1,8 +1,11 @@
 <template>
   <div class="booking-info">
-    <p class="booking-info__id">
-      {{ bookingData.id }}
-    </p>
+    <div class="booking-info__header">
+      <p class="booking-info__id">
+        {{ bookingData.id }}
+      </p>
+      <AlertButton :id="bookingData.id"/>
+    </div>
     <BTitle tag="h2" type="user-name" class="booking-info__name">
       {{ bookingData.name }}
     </BTitle>
@@ -27,9 +30,10 @@
 
 <script>
 import { mapState } from 'vuex';
-import Tags from '../../components/shared/Tags/index.vue';
-import timeMixin from '../../mixins/timeMixin';
-import BTitle from '../../components/common/BTitle/index.vue';
+import Tags from '@/components/shared/Tags/index.vue';
+import AlertButton from '@/components/features/Alerts/AlertButton.vue';
+import timeMixin from '@/mixins/timeMixin';
+import BTitle from '@/components/common/BTitle/index.vue';
 
 export default {
   name: 'BookingInfo',
@@ -39,6 +43,7 @@ export default {
   components: {
     Tags,
     BTitle,
+    AlertButton,
   },
 
   computed: {
@@ -48,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/_variables.scss";
+@import "@/scss/_variables.scss";
 
 .booking-info {
   padding: 1.25rem 4.375rem 2.5rem;
@@ -56,6 +61,12 @@ export default {
   border-radius: 0.313rem;
   font-size: 0.875rem;
   margin-bottom: 2rem;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 
   &__id {
     color: $dark-gray;

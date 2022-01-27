@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../../scss/_variables.scss";
+  @import "@/scss/_variables.scss";
 
   .main {
     font-size: 2.2rem;

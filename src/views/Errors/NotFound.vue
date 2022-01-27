@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import BTitle from '../../components/common/BTitle/index.vue';
+import BTitle from '@/components/common/BTitle/index.vue';
 
 export default {
   name: 'NotFound',
@@ -27,7 +27,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../../scss/_variables.scss";
+@import "@/scss/_variables.scss";
 
 .not-found {
   display: flex;

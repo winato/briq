@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="container">
       <div class="header__row">
         <router-link :to="{ name: 'bookings' }">
@@ -8,11 +8,11 @@
         <Statistic/>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
-import Statistic from '../../features/Statistic/index.vue';
+import Statistic from '@/components/features/Statistic/index.vue';
 
 export default {
   name: 'Header',

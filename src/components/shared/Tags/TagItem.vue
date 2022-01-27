@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import removeDash from '../../../utils/removeDash';
+import removeDash from '@/utils/removeDash';
 
 export default {
   name: 'TagItem',
@@ -22,7 +22,7 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "../../../scss/_variables.scss";
+  @import "@/scss/_variables.scss";
 
   .tag-item {
     background-color: $green;

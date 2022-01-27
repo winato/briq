@@ -22,8 +22,8 @@
 
 <script>
 import { mapActions, mapState } from 'vuex';
-import BTitle from '../../components/common/BTitle/index.vue';
-import AlertModal from '../../components/features/Alerts/AlertModal.vue';
+import BTitle from '@/components/common/BTitle/index.vue';
+import AlertModal from '@/components/features/Alerts/AlertModal.vue';
 import BookingsList from './BookingsList.vue';
 
 const INTERVAL = 60 * 1000;

@@ -29,6 +29,7 @@ export default {
 
 <style lang="scss">
   .alert-button {
+    cursor: pointer;
     opacity: .7;
     transition: opacity .1s ease-in-out;
 
