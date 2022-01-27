@@ -16,7 +16,12 @@
               class="modal__close"
               src="../../../assets/close.svg"
               alt="close"
-              aria-label="Close modal"
+              aria-hidden="true"
+              role="button"
+              tabindex="0"
+              aria-label="Close"
+              @keyup.esc="close"
+              @keyup.enter="close"
               @click="close"
             >
           </div>
