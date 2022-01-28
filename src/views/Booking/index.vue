@@ -4,17 +4,17 @@
       <BTitle type="main" tag="h1">
         Booking
       </BTitle>
-      <div class="booking__body">
-        <BookingInfo v-if="successSingleBooking"/>
-        <BTitle
-          tag="h4"
-          type="empty"
-          v-else
-        >
-          Something went wrong. Please try again later!
-        </BTitle>
+      <div class="booking__body" v-if="successSingleBooking">
+        <BookingInfo/>
         <Alerts :alerts="alertsByBooking($router.history.current.params.id)"/>
       </div>
+      <BTitle
+        tag="h4"
+        type="empty"
+        v-else
+      >
+        Something went wrong. Please try again later!
+      </BTitle>
       <AlertModal/>
     </div>
   </div>
